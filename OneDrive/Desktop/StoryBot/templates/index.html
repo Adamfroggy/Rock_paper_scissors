@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryBot</title>
+</head>
+<body>
+    <h1>StoryBot</h1>
+    <form action="/generate_story" method="post">
+        <label for="user_prompt">Enter your prompt:</label><br>
+        <textarea id="user_prompt" name="user_prompt" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Generate Story">
+    </form>
+    <div id="story_output">
+        {% if story %}
+            <h2>Generated Story:</h2>
+            <p>{{ story }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
